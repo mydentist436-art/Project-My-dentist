@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Sparkles, Shield, Zap, Scissors, Anchor, AlignCenter, Sun, Baby } from 'lucide-react'
 import { services } from '@/data/services'
 import SectionTitle from '@/components/ui/SectionTitle'
@@ -35,16 +36,37 @@ export default function ServicesPreview() {
             const colorCls = bgColors[index % bgColors.length]
 
             return (
-              <StaggerItem key={service.id}>
-                <Link href={`/services#${service.id}`} className="group block">
-                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 h-full">
-                    <div className={`w-12 h-12 rounded-xl ${colorCls} flex items-center justify-center mb-4`}>
-                      <Icon className="w-6 h-6" />
+              <StaggerItem key={service.id} className="h-full">
+                <Link href={`/services#${service.id}`} className="group block h-full">
+                  <div className="relative overflow-hidden bg-gray-900 rounded-2xl border border-gray-100 shadow-card hover:shadow-card-hover transition-all duration-500 h-full min-h-[320px] isolate">
+                    {service.image && (
+                      <>
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110 -z-20"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent transition-opacity duration-500 group-hover:opacity-80 -z-10"></div>
+                      </>
+                    )}
+                    
+                    <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className={`w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 text-white border border-white/20 transition-transform duration-500 group-hover:-translate-y-2`}>
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <h3 className="font-semibold text-xl mb-1 group-hover:text-teal-300 transition-colors">
+                        {service.title}
+                      </h3>
+                      
+                      <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        <div className="overflow-hidden">
+                          <p className="text-gray-200 text-sm leading-relaxed pt-3 border-t border-white/20 mt-3">
+                            {service.shortDesc}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 text-base group-hover:text-teal-700 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{service.shortDesc}</p>
                   </div>
                 </Link>
               </StaggerItem>

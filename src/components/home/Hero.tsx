@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Phone, CalendarCheck, MapPin, Star, ChevronDown } from 'lucide-react'
 import { CALL_LINK, PHONE_PRIMARY } from '@/lib/constants'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -56,6 +57,55 @@ export default function Hero() {
               Trusted dental care by <strong className="text-white">Dr. S.M Amin</strong> in Salipur. Painless treatments, advanced technology, and a warm welcome for every patient.
             </motion.p>
 
+            {/* Mobile Doctor Card (visible only on mobile, placed between text and buttons) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative flex lg:hidden justify-center my-10"
+            >
+              {/* Floating card */}
+              <div className="relative">
+                {/* Doctor Image */}
+                <div className="relative w-[300px] h-[380px] md:w-[450px] md:h-[550px] animate-float flex justify-center items-end">
+                  <Image
+                    src="/images/doctor/dr-amin-hero.webp"
+                    alt="Dr. S.M Amin"
+                    fill
+                    priority
+                    className="object-contain object-bottom drop-shadow-2xl"
+                    sizes="(max-width: 768px) 300px, 450px"
+                  />
+                </div>
+
+                {/* Floating badge: Experience */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                  className="absolute top-10 -left-6 md:top-20 md:-left-12 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 z-20"
+                >
+                  <span className="text-2xl">🏆</span>
+                  <div>
+                    <div className="text-xs text-gray-500 font-medium">Experience</div>
+                    <div className="text-teal-700 font-bold text-sm">11+ Years</div>
+                  </div>
+                </motion.div>
+
+                {/* Floating badge: Painless */}
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                  className="absolute bottom-12 -right-4 md:bottom-20 md:-right-8 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 z-20"
+                >
+                  <span className="text-2xl">✅</span>
+                  <div>
+                    <div className="text-xs text-gray-500 font-medium">Treatments</div>
+                    <div className="text-teal-700 font-bold text-sm">100% Painless</div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -98,35 +148,32 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: Doctor Card */}
+          {/* Desktop Right: Doctor Card (hidden on mobile) */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative hidden lg:flex justify-end"
           >
             {/* Floating card */}
             <div className="relative">
-              {/* Doctor avatar card */}
-              <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-teal-400/30 to-white/10 backdrop-blur-sm border border-white/20 flex flex-col items-center justify-center shadow-2xl animate-float">
-                <div className="w-32 h-32 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/40 flex items-center justify-center mb-4">
-                  <span className="text-6xl">👨‍⚕️</span>
-                </div>
-                <h3 className="text-white font-bold text-xl">Dr. S.M Amin</h3>
-                <p className="text-teal-200 text-sm">BDS – S'O'A University</p>
-                <p className="text-teal-100 text-xs mt-1">Dental Surgeon</p>
-                <div className="flex items-center gap-1 mt-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
+              {/* Doctor Image */}
+              <div className="relative w-[300px] h-[380px] md:w-[450px] md:h-[550px] animate-float flex justify-center items-end">
+                <Image
+                  src="/images/doctor/dr-amin-hero.webp"
+                  alt="Dr. S.M Amin"
+                  fill
+                  priority
+                  className="object-contain object-bottom drop-shadow-2xl"
+                  sizes="(max-width: 768px) 300px, 450px"
+                />
               </div>
 
               {/* Floating badge: Experience */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -left-8 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2"
+                className="absolute top-10 -left-6 md:top-20 md:-left-12 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 z-20"
               >
                 <span className="text-2xl">🏆</span>
                 <div>
@@ -139,7 +186,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                className="absolute -bottom-4 -right-6 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2"
+                className="absolute bottom-12 -right-4 md:bottom-20 md:-right-8 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2 z-20"
               >
                 <span className="text-2xl">✅</span>
                 <div>

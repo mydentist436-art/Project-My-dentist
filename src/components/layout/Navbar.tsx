@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Phone, Menu, X } from 'lucide-react'
 import { useScroll } from '@/hooks/useScroll'
@@ -25,8 +26,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group" onClick={() => setMobileOpen(false)}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <span className="text-white font-bold text-lg">🦷</span>
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow bg-white flex shrink-0">
+              <Image src="/images/logo/new-logo.webp" alt="My Dentist Logo" fill className="object-contain" />
             </div>
             <div className="flex flex-col leading-tight">
               <span className={cn(

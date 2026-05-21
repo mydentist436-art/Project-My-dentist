@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, MapPin, Clock, Mail, MessageCircle } from 'lucide-react'
 import { NAV_ITEMS, CALL_LINK, PHONE_PRIMARY, PHONE_SECONDARY, WHATSAPP_LINK } from '@/lib/constants'
 import { clinicInfo } from '@/data/clinic'
@@ -14,8 +15,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center">
-                <span className="text-xl">🦷</span>
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-white flex shrink-0">
+                <Image src="/images/logo/new-logo.webp" alt="My Dentist Logo" fill className="object-contain" />
               </div>
               <div>
                 <div className="font-bold text-xl">My Dentist</div>
