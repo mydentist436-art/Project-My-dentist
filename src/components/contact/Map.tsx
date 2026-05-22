@@ -5,7 +5,7 @@ export default function Map() {
   return (
     <div className="bg-white rounded-2xl shadow-card border border-gray-50 overflow-hidden">
       {/* Map embed */}
-      <div className="relative h-64 md:h-80 bg-teal-50">
+      <div className="relative h-64 md:h-80" style={{ background: '#e8f8fd' }}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.0!2d86.0800!3d20.4600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1a9ae6!2sSalipur%2C%20Cuttack%2C%20Odisha!5e0!3m2!1sen!2sin!4v1000000000"
           width="100%"
@@ -22,8 +22,8 @@ export default function Map() {
       {/* Address panel */}
       <div className="p-6">
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
-            <MapPin className="w-5 h-5 text-teal-600" />
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: '#e8f8fd' }}>
+            <MapPin className="w-5 h-5" style={{ color: '#2FBADE' }} />
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 mb-1">Clinic Address</h4>
@@ -39,7 +39,7 @@ export default function Map() {
           href={clinicInfo.contact.mapLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 w-full justify-center bg-teal-600 text-white font-semibold py-3 rounded-xl hover:bg-teal-700 transition-colors text-sm"
+          className="btn-map-link inline-flex items-center gap-2 w-full justify-center text-white font-semibold py-3 rounded-xl transition-colors text-sm"
         >
           <ExternalLink className="w-4 h-4" />
           Open in Google Maps

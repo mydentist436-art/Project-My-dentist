@@ -78,14 +78,14 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="bg-white rounded-2xl p-10 shadow-card border border-gray-50 text-center">
-        <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
-          <CheckCircle className="w-8 h-8 text-teal-600" />
+        <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: '#e8f8fd' }}>
+          <CheckCircle className="w-8 h-8" style={{ color: '#2FBADE' }} />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">Redirecting to WhatsApp...</h3>
         <p className="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">
           Thank you, <strong>{formData.name}</strong>! Please send the pre-filled message on WhatsApp to confirm your appointment with our team.
         </p>
-        <p className="text-teal-600 text-sm mt-4 font-medium">
+        <p className="text-sm mt-4 font-medium" style={{ color: '#2FBADE' }}>
           For urgent care, call: {PHONE_PRIMARY}
         </p>
       </div>
@@ -129,7 +129,7 @@ export default function ContactForm() {
         <select
           value={formData.service}
           onChange={handleChange('service')}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-800 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#2FBADE] focus:border-transparent transition-all"
         >
           <option value="">Select a service...</option>
           {services.map((s) => (
@@ -152,7 +152,8 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center gap-2 bg-teal-600 text-white font-semibold py-3.5 rounded-xl hover:bg-teal-700 transition-all duration-200 disabled:opacity-70"
+        className="w-full flex items-center justify-center gap-2 text-white font-semibold py-3.5 rounded-xl transition-all duration-200 disabled:opacity-70"
+        style={{ background: '#F71A25' }}
       >
         {loading ? (
           <span className="flex items-center gap-2">

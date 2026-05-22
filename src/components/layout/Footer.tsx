@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="font-bold text-xl">My Dentist</div>
-                <div className="text-teal-400 text-xs">Dr. S.M Amin, BDS</div>
+                <div className="text-xs" style={{ color: '#2FBADE' }}>Dr. S.M Amin, BDS</div>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-teal-400 text-sm transition-colors"
+                    className="text-gray-400 text-sm transition-colors hover:text-[#2FBADE]"
                   >
                     {item.label}
                   </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {['Teeth Cleaning & Scaling', 'Root Canal Treatment', 'Dental Implants', 'Braces & Aligners', 'Teeth Whitening', 'Pediatric Dentistry'].map((s) => (
                 <li key={s}>
-                  <Link href="/services" className="text-gray-400 hover:text-teal-400 text-sm transition-colors">
+                  <Link href="/services" className="text-gray-400 hover:text-[#2FBADE] text-sm transition-colors">
                     {s}
                   </Link>
                 </li>
@@ -73,20 +73,20 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-4 text-base">Contact Us</h3>
             <ul className="space-y-3">
               <li>
-                <a href={CALL_LINK} className="flex items-start gap-3 text-gray-400 hover:text-teal-400 text-sm transition-colors">
-                  <Phone className="w-4 h-4 mt-0.5 text-teal-500 shrink-0" />
+                <a href={CALL_LINK} className="flex items-start gap-3 text-gray-400 hover:text-[#2FBADE] text-sm transition-colors">
+                  <Phone className="w-4 h-4 mt-0.5 shrink-0" style={{ color: '#2FBADE' }} />
                   <span>{PHONE_PRIMARY} / {PHONE_SECONDARY}</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-gray-400 text-sm">
-                  <MapPin className="w-4 h-4 mt-0.5 text-teal-500 shrink-0" />
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: '#2FBADE' }} />
                   <span>{clinicInfo.contact.addressLine1}, {clinicInfo.contact.addressLine2}, {clinicInfo.contact.addressLine3}</span>
                 </div>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-gray-400 text-sm">
-                  <Clock className="w-4 h-4 mt-0.5 text-teal-500 shrink-0" />
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0" style={{ color: '#2FBADE' }} />
                   <div>
                     <div>Mon–Fri: 9AM–1PM & 4–8PM</div>
                     <div>Sat: 9AM–8PM</div>
@@ -95,8 +95,8 @@ export default function Footer() {
                 </div>
               </li>
               <li>
-                <a href={`mailto:${clinicInfo.contact.email}`} className="flex items-center gap-3 text-gray-400 hover:text-teal-400 text-sm transition-colors">
-                  <Mail className="w-4 h-4 text-teal-500 shrink-0" />
+                <a href={`mailto:${clinicInfo.contact.email}`} className="flex items-center gap-3 text-gray-400 hover:text-[#2FBADE] text-sm transition-colors">
+                  <Mail className="w-4 h-4 shrink-0" style={{ color: '#2FBADE' }} />
                   {clinicInfo.contact.email}
                 </a>
               </li>

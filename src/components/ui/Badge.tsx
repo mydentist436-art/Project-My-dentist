@@ -8,7 +8,7 @@ interface BadgeProps {
 }
 
 const variants = {
-  teal: 'bg-teal-50 text-teal-700 border-teal-100',
+  teal: 'bg-[#e8f8fd] text-[#1587a3] border-[#d0f0fb]',
   green: 'bg-green-50 text-green-700 border-green-100',
   blue: 'bg-blue-50 text-blue-700 border-blue-100',
   gray: 'bg-gray-50 text-gray-700 border-gray-100',

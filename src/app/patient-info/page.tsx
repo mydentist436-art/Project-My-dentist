@@ -18,7 +18,12 @@ export default function PatientInfoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-700 to-teal-900 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(47, 186, 222, 0.85) 0%, rgba(30, 120, 140, 0.9) 100%), url('/images/hero/patient_info.webp')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -34,7 +39,7 @@ export default function PatientInfoPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Patient Information
             </h1>
-            <p className="text-teal-100 text-lg max-w-xl mx-auto">
+            <p className="text-blue-100 text-lg max-w-xl mx-auto">
               Everything you need to know before, during, and after your dental visit — answered by Dr. S.M Amin.
             </p>
           </FadeInUp>
@@ -63,7 +68,7 @@ export default function PatientInfoPage() {
               },
             ].map((card) => (
               <FadeInUp key={card.title}>
-                <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100 h-full">
+                <div className="rounded-2xl p-6 border border-[#d0f0fb] h-full" style={{ background: '#e8f8fd' }}>
                   <span className="text-3xl mb-3 block">{card.icon}</span>
                   <h3 className="font-bold text-gray-900 mb-2">{card.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
@@ -137,8 +142,8 @@ export default function PatientInfoPage() {
               },
               {
                 title: 'After Dental Implant',
-                color: 'border-teal-200 bg-teal-50',
-                badge: 'bg-teal-100 text-teal-700',
+                color: 'border-[#d0f0fb] bg-[#e8f8fd]',
+                badge: 'bg-[#d0f0fb] text-[#1587a3]',
                 tips: [
                   'Apply ice pack for 20 mins on/off for first day',
                   'Eat soft foods for 1–2 weeks',
@@ -183,7 +188,7 @@ export default function PatientInfoPage() {
                   <ul className="space-y-2 mt-1">
                     {card.tips.map((tip) => (
                       <li key={tip} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="text-teal-500 mt-0.5 shrink-0">✓</span>
+                        <span className="mt-0.5 shrink-0" style={{ color: '#2FBADE' }}>✓</span>
                         {tip}
                       </li>
                     ))}
@@ -211,19 +216,20 @@ export default function PatientInfoPage() {
       <section className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeInUp>
-            <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-10 relative overflow-hidden">
+            <div className="rounded-3xl p-10 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2FBADE 0%, #1587a3 100%)' }}>
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                   Still Have Questions?
                 </h2>
-                <p className="text-teal-100 text-sm mb-7 max-w-sm mx-auto">
+                <p className="text-blue-100 text-sm mb-7 max-w-sm mx-auto">
                   Call us, WhatsApp us, or book an appointment. Dr. Amin is happy to answer any concerns before you visit.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a
                     href={CALL_LINK}
-                    className="inline-flex items-center gap-2 bg-white text-teal-700 font-bold px-6 py-3 rounded-full hover:bg-teal-50 shadow-lg transition-all hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all hover:-translate-y-0.5"
+                    style={{ background: '#F71A25', boxShadow: '0 6px 20px rgba(247,26,37,0.35)' }}
                   >
                     <Phone className="w-4 h-4" />
                     Call Now

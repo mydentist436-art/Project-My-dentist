@@ -10,7 +10,7 @@ const iconMap: Record<string, React.ElementType> = {
 }
 
 const bgColors = [
-  'bg-teal-50 text-teal-600',
+  'bg-[#e8f8fd] text-[#2FBADE]',
   'bg-blue-50 text-blue-600',
   'bg-emerald-50 text-emerald-600',
   'bg-amber-50 text-amber-600',
@@ -55,7 +55,7 @@ export default function ServicesPreview() {
                       <div className={`w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4 text-white border border-white/20 transition-transform duration-500 group-hover:-translate-y-2`}>
                         <Icon className="w-6 h-6" />
                       </div>
-                      <h3 className="font-semibold text-xl mb-1 group-hover:text-teal-300 transition-colors">
+                      <h3 className="font-semibold text-xl mb-1 group-hover:text-[#2FBADE] transition-colors">
                         {service.title}
                       </h3>
                       
@@ -77,7 +77,8 @@ export default function ServicesPreview() {
         <div className="text-center mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-900 transition-colors group"
+            className="inline-flex items-center gap-2 font-semibold hover:opacity-80 transition-colors group"
+            style={{ color: '#1aa0c0' }}
           >
             View All Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/common/ScrollToTop'
 import StickyCallButton from '@/components/common/StickyCallButton'
+import MobileBottomBar from '@/components/layout/MobileBottomBar'
 import { AppProvider } from '@/context/AppContext'
 import { localSchema } from '@/lib/seo'
 
@@ -34,13 +35,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }}
         />
       </head>
-      <body>
+      <body className="pb-24 md:pb-0">
         <AppProvider>
           <ScrollToTop />
           <Navbar />
           <main>{children}</main>
           <Footer />
           <StickyCallButton />
+          <MobileBottomBar />
         </AppProvider>
       </body>
     </html>

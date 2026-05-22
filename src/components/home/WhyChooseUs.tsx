@@ -9,7 +9,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-gradient-to-br from-teal-700 to-teal-900 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2FBADE 0%, #1587a3 100%)' }}>
       {/* BG decoration */}
       <div className="absolute inset-0 opacity-10"
         style={{
@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20"
             >
               <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-teal-200 text-sm">{stat.label}</div>
+              <div className="text-blue-200 text-sm">{stat.label}</div>
             </div>
           ))}
         </FadeInUp>
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold text-base mb-2">{item.title}</h3>
-                  <p className="text-teal-100 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-blue-100 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </StaggerItem>
             )

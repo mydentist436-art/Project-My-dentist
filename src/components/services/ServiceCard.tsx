@@ -7,9 +7,9 @@ const iconMap: Record<string, React.ElementType> = {
 }
 
 const bgColors = [
-  'from-teal-400 to-teal-600',
+  'from-[#2FBADE] to-[#1587a3]',
   'from-blue-400 to-blue-600',
-  'from-emerald-400 to-emerald-600',
+  'from-[#F71A25] to-[#d4111b]',
   'from-amber-400 to-amber-600',
   'from-purple-400 to-purple-600',
   'from-rose-400 to-rose-600',
@@ -46,7 +46,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           <ul className="space-y-2">
             {service.benefits.map((b) => (
               <li key={b} className="flex items-start gap-2 text-sm text-gray-700">
-                <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5 shrink-0" />
+                <CheckCircle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: '#2FBADE' }} />
                 {b}
               </li>
             ))}
@@ -56,10 +56,10 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
         {/* Duration & Price */}
         <div className="grid grid-cols-2 gap-3 pt-4 border-t border-gray-100">
           <div className="flex items-center gap-2 text-xs text-gray-500">
-            <Clock className="w-3.5 h-3.5 text-teal-500" />
+            <Clock className="w-3.5 h-3.5" style={{ color: '#2FBADE' }} />
             <span>{service.duration}</span>
           </div>
-          <div className="flex items-center gap-1 text-xs text-teal-700 font-semibold">
+          <div className="flex items-center gap-1 text-xs font-semibold" style={{ color: '#1aa0c0' }}>
             <IndianRupee className="w-3 h-3" />
             <span>{service.priceRange.replace('₹', '')}</span>
           </div>

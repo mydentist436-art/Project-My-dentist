@@ -6,13 +6,13 @@ import { FadeInUp, StaggerContainer, StaggerItem } from '@/components/common/Mot
 
 const galleryItems = [
   { id: 1, category: 'Whitening', beforeImg: '/images/gallery/whitening_1_before.webp', afterImg: '/images/gallery/whitening_1_after.webp', label: 'Teeth Whitening – 6 Shades Brighter', desc: 'Patient had severe tea staining. Professional whitening achieved dramatic brightening in one session.' },
-  { id: 2, category: 'Braces', beforeImg: '/images/gallery/braces_before.webp', afterImg: '/images/gallery/braces_after.webp', label: 'Braces Treatment – 18 Months', desc: 'Crowded front teeth corrected with metal braces over 18 months. Beautiful, aligned smile achieved.' },
+  { id: 2, category: 'Braces', beforeImg: '/images/gallery/braces_before.webp', afterImg: '/images/gallery/braces_after_new.webp', label: 'Braces Treatment – 18 Months', desc: 'Crowded front teeth corrected with metal braces over 18 months. Beautiful, aligned smile achieved.' },
   { id: 3, category: 'Implant', beforeImg: '/images/gallery/implant_before.webp', afterImg: '/images/gallery/implant_after.webp', label: 'Dental Implant – Missing Molar', desc: 'Missing lower molar replaced with a titanium implant and ceramic crown. Natural look and function restored.' },
-  { id: 4, category: 'Veneer', beforeImg: '/images/gallery/veneer_before.webp', afterImg: '/images/gallery/veneer_after.webp', label: 'Smile Correction – Composite Veneers', desc: 'Chipped and uneven front teeth restored with composite veneers for a natural, confident smile.' },
+  { id: 4, category: 'Veneer', beforeImg: '/images/gallery/veneer_before.webp', afterImg: '/images/gallery/veneer_after_new.webp', label: 'Smile Correction – Composite Veneers', desc: 'Chipped and uneven front teeth restored with composite veneers for a natural, confident smile.' },
   { id: 5, category: 'RCT', beforeImg: '/images/gallery/rct_before.webp', afterImg: '/images/gallery/rct_new_after.webp', label: 'Root Canal – Severe Pain Relieved', desc: 'Severely infected tooth saved with modern rotary RCT. Patient reported zero pain during procedure.' },
   { id: 6, category: 'Whitening', beforeImg: '/images/gallery/whitening_2_new_before.webp', afterImg: '/images/gallery/whitening_2_after.webp', label: 'Coffee Stain Removal', desc: 'Years of coffee and tobacco staining removed with professional scaling and whitening treatment.' },
   { id: 7, category: 'Braces', beforeImg: '/images/gallery/underbite_new_before.webp', afterImg: '/images/gallery/underbite_after.webp', label: 'Underbite Correction', desc: 'Bite misalignment corrected with a combination of braces and bite plate therapy over 20 months.' },
-  { id: 8, category: 'Implant', beforeImg: '/images/gallery/full_upper_new_before.webp', afterImg: '/images/gallery/full_upper_new_after.webp', label: 'Full Upper Restoration', desc: 'Multiple missing upper teeth restored with implant-supported bridge. Eating and speaking fully restored.' },
+  { id: 8, category: 'Implant', beforeImg: '/images/gallery/full_upper_new_before.webp', afterImg: '/images/gallery/full_upper_new_after2.webp', label: 'Full Upper Restoration', desc: 'Multiple missing upper teeth restored with implant-supported bridge. Eating and speaking fully restored.' },
   { id: 9, category: 'Cleaning', beforeImg: '/images/gallery/cleaning_new_before.webp', afterImg: '/images/gallery/cleaning_new_after.webp', label: 'Deep Scaling & Cleaning', desc: 'Heavy calculus and gum inflammation resolved with deep scaling and root planing. Healthy gums achieved.' },
 ]
 
@@ -21,7 +21,7 @@ const categories = ['All', 'Whitening', 'Braces', 'Implant', 'Veneer', 'RCT', 'C
 const categoryColors: Record<string, string> = {
   Whitening: 'bg-yellow-100 text-yellow-700',
   Braces: 'bg-blue-100 text-blue-700',
-  Implant: 'bg-teal-100 text-teal-700',
+  Implant: 'bg-[#e8f8fd] text-[#1587a3]',
   Veneer: 'bg-purple-100 text-purple-700',
   RCT: 'bg-red-100 text-red-700',
   Cleaning: 'bg-green-100 text-green-700',
@@ -70,14 +70,14 @@ function GalleryCard({ item, index, categoryColors, onClick }: any) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={`object-cover transition-opacity duration-1000 md:group-hover:opacity-100 ${showAfter ? 'opacity-100' : 'opacity-0'} md:opacity-0`}
           />
-          <div className={`absolute top-4 right-4 bg-teal-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wider z-10 transition-opacity duration-1000 md:group-hover:opacity-100 ${showAfter ? 'opacity-100' : 'opacity-0'} md:opacity-0 shadow-md`}>
+          <div className={`absolute top-4 right-4 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wider z-10 transition-opacity duration-1000 md:group-hover:opacity-100 ${showAfter ? 'opacity-100' : 'opacity-0'} md:opacity-0 shadow-md`} style={{ background: 'rgba(47,186,222,0.92)' }}>
             AFTER
           </div>
         </div>
         <div className="p-5">
           <div className="flex items-start justify-between gap-2 mb-2">
             <h3 className="font-semibold text-gray-900 text-sm leading-tight">{item.label}</h3>
-            <ZoomIn className="w-4 h-4 text-gray-300 group-hover:text-teal-500 transition-colors shrink-0 mt-0.5" />
+            <ZoomIn className="w-4 h-4 text-gray-300 group-hover:text-[#2FBADE] transition-colors shrink-0 mt-0.5" />
           </div>
           <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${categoryColors[item.category]}`}>
             {item.category}
@@ -104,9 +104,10 @@ export default function GalleryGrid() {
             onClick={() => setActive(cat)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               active === cat
-                ? 'bg-teal-600 text-white shadow-md'
-                : 'bg-white text-gray-600 border border-gray-200 hover:border-teal-300 hover:text-teal-700'
+                ? 'text-white shadow-md'
+                : 'bg-white text-gray-600 border border-gray-200 hover:border-[#2FBADE] hover:text-[#1aa0c0]'
             }`}
+            style={active === cat ? { background: '#F71A25' } : {}}
           >
             {cat}
           </button>
@@ -147,9 +148,9 @@ export default function GalleryGrid() {
                 <Image src={selected.beforeImg} alt="Before" fill className="object-cover" />
                 <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">BEFORE</div>
               </div>
-              <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden bg-teal-50 border border-teal-100">
+              <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden border" style={{ background: '#e8f8fd', borderColor: '#d0f0fb' }}>
                 <Image src={selected.afterImg} alt="After" fill className="object-cover" />
-                <div className="absolute top-3 right-3 bg-teal-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">AFTER</div>
+                <div className="absolute top-3 right-3 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg" style={{ background: 'rgba(47,186,222,0.92)' }}>AFTER</div>
               </div>
             </div>
             <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[selected.category]}`}>

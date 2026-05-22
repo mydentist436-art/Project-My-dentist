@@ -17,7 +17,12 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-700 to-teal-900 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(47, 186, 222, 0.85) 0%, rgba(30, 120, 140, 0.9) 100%), url('/images/hero/gallery.webp')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -33,7 +38,7 @@ export default function GalleryPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Smile Gallery
             </h1>
-            <p className="text-teal-100 text-lg max-w-xl mx-auto">
+            <p className="text-blue-100 text-lg max-w-xl mx-auto">
               Real before & after transformations from our patients. These are genuine results achieved right here at My Dentist, Salipur.
             </p>
           </FadeInUp>
@@ -59,7 +64,7 @@ export default function GalleryPage() {
             <p className="text-gray-400 text-sm mb-8">
               * Results may vary by individual case. All treatments are performed by Dr. S.M Amin (BDS) following evidence-based dental protocols. Gallery represents a selection of cases treated at My Dentist, Salipur.
             </p>
-            <div className="bg-teal-50 rounded-2xl p-8 border border-teal-100">
+            <div className="rounded-2xl p-8 border" style={{ background: '#e8f8fd', borderColor: '#d0f0fb' }}>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Ready for Your Own Smile Transformation?
               </h3>
@@ -69,14 +74,16 @@ export default function GalleryPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href={CALL_LINK}
-                  className="inline-flex items-center gap-2 bg-teal-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-teal-700 transition-all hover:-translate-y-0.5 shadow-md"
+                  className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full transition-all hover:-translate-y-0.5 shadow-md"
+                  style={{ background: '#F71A25', boxShadow: '0 4px 16px rgba(247,26,37,0.28)' }}
                 >
                   <Phone className="w-4 h-4" />
                   Call 9692827635
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 border-2 border-teal-600 text-teal-700 font-semibold px-6 py-3 rounded-full hover:bg-teal-50 transition-all"
+                  className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-full transition-all"
+                  style={{ border: '2px solid #2FBADE', color: '#1aa0c0' }}
                 >
                   Book Appointment
                 </Link>

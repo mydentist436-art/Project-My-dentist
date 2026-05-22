@@ -17,7 +17,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-700 to-teal-900 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(47, 186, 222, 0.85) 0%, rgba(30, 120, 140, 0.9) 100%), url('/images/hero/contact.webp')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -33,7 +38,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Contact Us
             </h1>
-            <p className="text-teal-100 text-lg max-w-lg mx-auto">
+            <p className="text-blue-100 text-lg max-w-lg mx-auto">
               Walk in, call, or send a message. We're here for you Monday through Sunday.
             </p>
           </FadeInUp>
@@ -47,14 +52,14 @@ export default function ContactPage() {
             <StaggerItem>
               <a
                 href={CALL_LINK}
-                className="flex items-center gap-4 p-5 rounded-2xl border border-teal-100 bg-teal-50 hover:bg-teal-100 transition-colors group"
+                className="flex items-center gap-4 p-5 rounded-2xl border border-[#fee2e2] bg-[#fef2f2] hover:bg-[#fee2e2] transition-colors group"
               >
-                <div className="w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: '#F71A25' }}>
                   <PhoneCall className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 font-medium">Primary Phone</div>
-                  <div className="font-bold text-teal-700 text-lg group-hover:text-teal-800">{PHONE_PRIMARY}</div>
+                  <div className="font-bold text-lg group-hover:opacity-80" style={{ color: '#F71A25' }}>{PHONE_PRIMARY}</div>
                 </div>
               </a>
             </StaggerItem>
@@ -109,7 +114,7 @@ export default function ContactPage() {
                 {/* Working Hours */}
                 <div className="bg-white rounded-2xl p-6 shadow-card border border-gray-50">
                   <div className="flex items-center gap-2 mb-4">
-                    <Clock className="w-5 h-5 text-teal-600" />
+                    <Clock className="w-5 h-5" style={{ color: '#2FBADE' }} />
                     <h3 className="font-semibold text-gray-900">Working Hours</h3>
                   </div>
                   <div className="space-y-3">
@@ -121,7 +126,7 @@ export default function ContactPage() {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-100">
-                    <p className="text-xs text-teal-600 font-medium">
+                    <p className="text-xs font-medium" style={{ color: '#F71A25' }}>
                       🚨 Dental emergencies seen immediately during working hours — call ahead.
                     </p>
                   </div>
@@ -130,7 +135,7 @@ export default function ContactPage() {
                 {/* Address detail */}
                 <div className="bg-white rounded-2xl p-6 shadow-card border border-gray-50">
                   <div className="flex items-center gap-2 mb-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5" style={{ color: '#2FBADE' }} />
                     <h3 className="font-semibold text-gray-900">How to Find Us</h3>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-3">

@@ -7,7 +7,7 @@ const iconMap: Record<string, React.ElementType> = {
 }
 
 const bgColors = [
-  'bg-teal-50 text-teal-600',
+  'bg-[#e8f8fd] text-[#2FBADE]',
   'bg-blue-50 text-blue-600',
   'bg-cyan-50 text-cyan-600',
   'bg-amber-50 text-amber-600',

@@ -32,13 +32,13 @@ export default function Navbar() {
             <div className="flex flex-col leading-tight">
               <span className={cn(
                 'font-bold text-xl transition-colors',
-                scrolled ? 'text-teal-700' : 'text-white drop-shadow'
+                scrolled ? 'text-gray-900' : 'text-white drop-shadow'
               )}>
                 My Dentist
               </span>
               <span className={cn(
                 'text-xs transition-colors hidden sm:block',
-                scrolled ? 'text-teal-500' : 'text-teal-100'
+                scrolled ? 'text-[#2FBADE]' : 'text-blue-100'
               )}>
                 Dr. S.M Amin, BDS
               </span>
@@ -54,9 +54,9 @@ export default function Navbar() {
                 className={cn(
                   'px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
                   pathname === item.href
-                    ? 'bg-teal-600 text-white'
+                    ? 'bg-[#F71A25] text-white'
                     : scrolled
-                    ? 'text-gray-700 hover:bg-teal-50 hover:text-teal-700'
+                    ? 'text-gray-700 hover:bg-[#e8f8fd] hover:text-[#1aa0c0]'
                     : 'text-white/90 hover:text-white hover:bg-white/15',
                 )}
               >
@@ -69,7 +69,10 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href={CALL_LINK}
-              className="hidden sm:flex items-center gap-2 bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-teal-700 transition-all duration-200 shadow-md hover:shadow-lg"
+              className="hidden sm:flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
+              style={{ background: '#F71A25', boxShadow: '0 4px 14px rgba(247,26,37,0.30)' }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#d4111b')}
+              onMouseLeave={e => (e.currentTarget.style.background = '#F71A25')}
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>
@@ -104,8 +107,8 @@ export default function Navbar() {
               className={cn(
                 'px-4 py-3 rounded-xl text-sm font-medium transition-colors',
                 pathname === item.href
-                  ? 'bg-teal-50 text-teal-700 font-semibold'
-                  : 'text-gray-700 hover:bg-gray-50',
+                  ? 'bg-[#fff0f1] text-[#F71A25] font-semibold'
+                  : 'text-gray-700 hover:bg-[#e8f8fd] hover:text-[#1aa0c0]',
               )}
             >
               {item.label}
@@ -113,7 +116,8 @@ export default function Navbar() {
           ))}
           <a
             href={CALL_LINK}
-            className="mt-2 flex items-center justify-center gap-2 bg-teal-600 text-white font-semibold py-3 rounded-xl"
+            className="mt-2 flex items-center justify-center gap-2 text-white font-semibold py-3 rounded-xl"
+            style={{ background: '#F71A25' }}
           >
             <Phone className="w-4 h-4" />
             Call {PHONE_PRIMARY}

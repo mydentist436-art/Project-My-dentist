@@ -30,9 +30,10 @@ export default function FAQ() {
             onClick={() => setActiveCategory(cat.key)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeCategory === cat.key
-                ? 'bg-teal-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-teal-50 hover:text-teal-700'
+                ? 'text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-[#e8f8fd] hover:text-[#1aa0c0]'
             }`}
+            style={activeCategory === cat.key ? { background: '#F71A25' } : {}}
           >
             {cat.label}
           </button>
@@ -54,7 +55,7 @@ export default function FAQ() {
                 </h3>
                 <div className="shrink-0">
                   {open === faq.id ? (
-                    <ChevronUp className="w-5 h-5 text-teal-600" />
+                    <ChevronUp className="w-5 h-5" style={{ color: '#2FBADE' }} />
                   ) : (
                     <ChevronDown className="w-5 h-5 text-gray-400" />
                   )}

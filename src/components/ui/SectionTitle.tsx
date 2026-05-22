@@ -24,7 +24,7 @@ export default function SectionTitle({
           'inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4',
           light
             ? 'bg-white/20 text-white'
-            : 'bg-teal-50 text-teal-700',
+            : 'bg-[#e8f8fd] text-[#1587a3]',
         )}>
           {badge}
         </span>
@@ -39,7 +39,7 @@ export default function SectionTitle({
         <p className={cn(
           'text-base md:text-lg max-w-2xl leading-relaxed',
           center && 'mx-auto',
-          light ? 'text-teal-100' : 'text-gray-500',
+          light ? 'text-blue-100' : 'text-gray-500',
         )}>
           {subtitle}
         </p>

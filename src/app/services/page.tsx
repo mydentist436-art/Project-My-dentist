@@ -17,7 +17,12 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-700 to-teal-900 relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(47, 186, 222, 0.85) 0%, rgba(30, 120, 140, 0.9) 100%), url('/images/hero/services.webp')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -33,7 +38,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Our Dental Services
             </h1>
-            <p className="text-teal-100 text-lg max-w-xl mx-auto">
+            <p className="text-blue-100 text-lg max-w-xl mx-auto">
               Comprehensive, affordable dental care under one roof — delivered with expertise and a gentle touch.
             </p>
           </FadeInUp>
@@ -56,19 +61,19 @@ export default function ServicesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp>
-            <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-10 text-center relative overflow-hidden">
+            <div className="rounded-3xl p-10 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2FBADE 0%, #1587a3 100%)' }}>
               <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                   Not Sure Which Treatment You Need?
                 </h2>
-                <p className="text-teal-100 text-sm mb-7 max-w-sm mx-auto">
+                <p className="text-blue-100 text-sm mb-7 max-w-sm mx-auto">
                   Book a consultation with Dr. S.M Amin and get a thorough examination, honest advice, and a personalised treatment plan.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a
                     href={CALL_LINK}
-                    className="inline-flex items-center gap-2 bg-white text-teal-700 font-bold px-6 py-3 rounded-full hover:bg-teal-50 shadow-lg transition-all hover:-translate-y-0.5"
+                    className="btn-red-cta px-6 py-3 font-bold shadow-lg"
                   >
                     <Phone className="w-4 h-4" />
                     Call Now
