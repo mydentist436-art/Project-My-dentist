@@ -7,10 +7,10 @@ import { clinicInfo } from '@/data/clinic'
 import { CALL_LINK, PHONE_PRIMARY, PHONE_SECONDARY, WHATSAPP_LINK } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Contact & Appointments | My Dentist Salipur – Dr. S.M Amin',
+  title: 'Contact & Appointments | My Dentist Salepur – Dr. S.M Amin',
   description:
-    'Contact My Dentist in Salipur, Cuttack. Call 9692827635 or visit us at Under Bank Of Baroda, Kendrapara Rd, Chaka, Salipur. Book your appointment today.',
-  alternates: { canonical: 'https://mydentist-salipur.com/contact' },
+    'Contact My Dentist in Salepur. Call 9692827635 or visit us at Under Bank Of Baroda, At-Thana Chaka, Kendrapara Rd, Salepur. Book your dental appointment today.',
+  alternates: { canonical: 'https://www.mydentistsalepur.com/contact' },
 }
 
 export default function ContactPage() {
@@ -139,10 +139,10 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900">How to Find Us</h3>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                    We are located <strong>under the Bank of Baroda building</strong> on Kendrapara Road, near Chaka, Salipur. Look for the My Dentist signboard on the ground floor.
+                    We are located <strong>Under Bank Of Baroda</strong>, At-Thana Chaka, Kendrapara Rd, Salipur, Odisha 754202. Look for the My Dentist signboard on the ground floor.
                   </p>
                   <p className="text-sm text-gray-500">
-                    <strong>Landmarks:</strong> Bank of Baroda, Chaka Junction, Kendrapara Rd
+                    <strong>Landmarks:</strong> Bank of Baroda, At-Thana Chaka, Kendrapara Rd
                   </p>
                 </div>
               </div>

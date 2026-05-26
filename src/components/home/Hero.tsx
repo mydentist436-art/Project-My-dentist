@@ -7,21 +7,36 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #2FBADE 0%, #1587a3 100%)' }}>
-      {/* Background blobs */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#2FBADE] rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white rounded-full blur-3xl opacity-20" />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#1E788C] via-[#2FBADE] to-[#0A4150]">
+      {/* Premium Mesh Gradient & Abstract Shapes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft upper-left highlight */}
+        <div className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-white rounded-full mix-blend-overlay filter blur-[120px] opacity-40" />
+        
+        {/* Deep center depth */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[1000px] max-h-[1000px] bg-[#07303B] rounded-full mix-blend-multiply filter blur-[150px] opacity-40" />
+        
+        {/* Subtle red accent glow — integrating with the brand red gracefully */}
+        <div className="absolute -bottom-[20%] -left-[10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-[#F71A25] rounded-full mix-blend-screen filter blur-[140px] opacity-[0.12]" />
+        
+        {/* Right side soft glow highlighting the doctor image */}
+        <div className="absolute top-1/4 -right-[15%] w-[45vw] h-[45vw] max-w-[700px] max-h-[700px] bg-[#4EE3FF] rounded-full mix-blend-soft-light filter blur-[130px] opacity-50" />
       </div>
-      {/* Subtle red accent glow — bottom-left corner, very soft */}
-      <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full blur-3xl opacity-20" style={{ background: 'radial-gradient(circle, #F71A25 0%, transparent 70%)' }} />
 
-      {/* Decorative dots */}
-      <div className="absolute inset-0 opacity-5"
+      {/* Subtle Noise / Texture overlay for premium depth */}
+      <div 
+        className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay"
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
+      />
+      
+      {/* Modern crisp grid (medical precision) */}
+      <div 
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
+          backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+          backgroundSize: '80px 80px',
+          maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
         }}
       />
 

@@ -7,10 +7,10 @@ import { CALL_LINK } from '@/lib/constants'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dental Services | My Dentist – Dr. S.M Amin, Salipur',
+  title: 'Dental Services | Best Dental Clinic in Salepur',
   description:
-    'Complete dental services in Salipur: Teeth Cleaning, Root Canal (RCT), Dental Implants, Braces, Whitening, Pediatric Dentistry & more. Affordable & painless.',
-  alternates: { canonical: 'https://mydentist-salipur.com/services' },
+    'Complete dental services in Salepur: Teeth Cleaning, Root Canal (RCT), Dental Implants, Braces, Whitening, Pediatric Dentistry & more. Affordable & painless.',
+  alternates: { canonical: 'https://www.mydentistsalepur.com/services' },
 }
 
 export default function ServicesPage() {

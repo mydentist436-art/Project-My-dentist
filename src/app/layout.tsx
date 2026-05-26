@@ -5,17 +5,18 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/common/ScrollToTop'
 import StickyCallButton from '@/components/common/StickyCallButton'
 import MobileBottomBar from '@/components/layout/MobileBottomBar'
+import FloatingWhatsApp from '@/components/common/FloatingWhatsApp'
 import { AppProvider } from '@/context/AppContext'
-import { localSchema } from '@/lib/seo'
+import { jsonLdGraph } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'My Dentist – Dr. S.M Amin | Best Dentist in Salipur, Cuttack',
+  title: 'My Dentist – Dr. S.M Amin | Best Dentist in Salepur',
   description:
-    'My Dentist in Salipur, Cuttack – Expert dental care by Dr. S.M Amin (BDS, S\'O\'A University). Painless RCT, implants, braces, teeth cleaning & more. Call 9692827635.',
-  keywords: ['dentist in Salipur', 'dental clinic Cuttack', 'Dr SM Amin', 'RCT Salipur', 'dental implants Cuttack'],
+    'Best Dentist in Salepur | Dental Clinic Near Nischintakoili | Expert dental care by Dr. S.M Amin (BDS). Painless RCT, implants, braces, teeth cleaning & more. Call 9692827635 to book an appointment.',
+  keywords: ['dentist in Salepur', 'dental clinic near Nischintakoili', 'best dentist Cuttack district', 'Dr SM Amin', 'RCT Salepur', 'dental implants Cuttack', 'teeth cleaning Salepur'],
   authors: [{ name: 'Dr. S.M Amin' }],
-  creator: 'My Dentist Salipur',
-  metadataBase: new URL('https://mydentist-salipur.com'),
+  creator: 'My Dentist',
+  metadataBase: new URL('https://www.mydentistsalepur.com'),
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -32,17 +33,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
         />
       </head>
       <body className="pb-24 md:pb-0">
         <AppProvider>
           <ScrollToTop />
           <Navbar />
-          <main>{children}</main>
+          <main className="overflow-x-hidden">{children}</main>
           <Footer />
           <StickyCallButton />
           <MobileBottomBar />
+          <FloatingWhatsApp />
         </AppProvider>
       </body>
     </html>

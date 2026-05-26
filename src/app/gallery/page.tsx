@@ -7,10 +7,10 @@ import { CALL_LINK } from '@/lib/constants'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Smile Gallery – Before & After | My Dentist Salipur',
+  title: 'Smile Gallery – Before & After | Best Dentist in Salepur',
   description:
-    'View real before & after results from My Dentist: teeth whitening, braces, dental implants, smile corrections and more by Dr. S.M Amin in Salipur, Cuttack.',
-  alternates: { canonical: 'https://mydentist-salipur.com/gallery' },
+    'View real before & after results from My Dentist: teeth whitening, braces, dental implants, smile corrections and more by Dr. S.M Amin in Salepur, Odisha.',
+  alternates: { canonical: 'https://www.mydentistsalepur.com/gallery' },
 }
 
 export default function GalleryPage() {

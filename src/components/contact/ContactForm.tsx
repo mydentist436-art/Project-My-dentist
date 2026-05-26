@@ -37,7 +37,7 @@ export default function ContactForm() {
 
     // Construct WhatsApp message
     const messageLines = [
-      `Hello Dr. S.M Amin,`,
+      `Hello My Dentist Salepur,`,
       ``,
       `I would like to request an appointment. Here are my details:`,
       `*Name:* ${formData.name}`,

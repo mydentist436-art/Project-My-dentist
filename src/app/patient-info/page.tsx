@@ -8,10 +8,10 @@ import { CALL_LINK, WHATSAPP_LINK } from '@/lib/constants'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Patient Information – FAQs & Dental Tips | My Dentist Salipur',
+  title: 'Patient Information – FAQs & Dental Tips | Dental Clinic Salepur',
   description:
-    'Find answers to common dental questions, post-treatment care tips, and oral hygiene advice from Dr. S.M Amin at My Dentist, Salipur, Cuttack.',
-  alternates: { canonical: 'https://mydentist-salipur.com/patient-info' },
+    'Find answers to common dental questions, post-treatment care tips, and oral hygiene advice from Dr. S.M Amin at My Dentist, Salepur, Cuttack district.',
+  alternates: { canonical: 'https://www.mydentistsalepur.com/patient-info' },
 }
 
 export default function PatientInfoPage() {

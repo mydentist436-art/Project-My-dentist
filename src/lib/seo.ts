@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
-const BASE_URL = 'https://mydentist-salipur.com'
-const CLINIC_NAME = 'My Dentist – Dr. S.M Amin'
+const BASE_URL = 'https://www.mydentistsalepur.com'
+const CLINIC_NAME = 'My Dentist – Dr. S.M Amin | Best Dentist in Salepur'
 const DEFAULT_DESCRIPTION =
-  'My Dentist in Salipur, Cuttack – Expert dental care by Dr. S.M Amin (BDS). Painless RCT, implants, braces, cleaning & more. Call 9692827635 to book an appointment.'
+  'Best Dentist in Salepur | Dental Clinic Near Nischintakoili | Expert dental care by Dr. S.M Amin (BDS). Painless RCT, implants, braces, teeth cleaning & more. Call 9692827635 to book an appointment.'
 
 export function generateMetadata(
   title: string,
@@ -52,55 +52,75 @@ export function generateMetadata(
   }
 }
 
-export const localSchema = {
+export const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@type': 'Dentist',
-  name: 'My Dentist',
-  image: `${BASE_URL}/images/clinic/clinic-front.webp`,
-  description: DEFAULT_DESCRIPTION,
-  url: BASE_URL,
-  telephone: '+919692827635',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Under Bank Of Baroda, At-Thana, Kendrapara Rd, Chaka',
-    addressLocality: 'Salipur',
-    addressRegion: 'Odisha',
-    postalCode: '754202',
-    addressCountry: 'IN',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 20.4567,
-    longitude: 86.0123,
-  },
-  openingHoursSpecification: [
+  '@graph': [
     {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '13:00',
+      '@type': ['Dentist', 'LocalBusiness'],
+      '@id': `${BASE_URL}/#localbusiness`,
+      name: 'My Dentist',
+      image: `${BASE_URL}/images/clinic/clinic-front.webp`,
+      description: DEFAULT_DESCRIPTION,
+      url: BASE_URL,
+      telephone: '+919692827635',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Under Bank Of Baroda, At-Thana Chaka, Kendrapara Rd',
+        addressLocality: 'Salepur',
+        addressRegion: 'Odisha',
+        postalCode: '754202',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 20.4567,
+        longitude: 86.0123,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '13:00',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '16:00',
+          closes: '20:00',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Saturday'],
+          opens: '09:00',
+          closes: '20:00',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Sunday'],
+          opens: '10:00',
+          closes: '13:00',
+        },
+      ],
+      priceRange: '₹₹',
+      currenciesAccepted: 'INR',
+      paymentAccepted: 'Cash, UPI, Card',
+      medicalSpecialty: 'Dentistry',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '150',
+      },
     },
     {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '16:00',
-      closes: '20:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
-      opens: '09:00',
-      closes: '20:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday'],
-      opens: '10:00',
-      closes: '13:00',
-    },
-  ],
-  priceRange: '₹₹',
-  currenciesAccepted: 'INR',
-  paymentAccepted: 'Cash, UPI, Card',
-  medicalSpecialty: 'Dentistry',
+      '@type': 'WebSite',
+      '@id': `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: CLINIC_NAME,
+      description: DEFAULT_DESCRIPTION,
+      publisher: {
+        '@id': `${BASE_URL}/#localbusiness`,
+      },
+    }
+  ]
 }

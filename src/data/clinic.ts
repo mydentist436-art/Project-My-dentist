@@ -18,14 +18,13 @@ export const clinicInfo = {
   contact: {
     phone1: '9692827635',
     phone2: '7978409003',
-    address: 'Under Bank Of Baroda, At-Thana, Kendrapara Rd, Chaka, Salipur, Cuttack, Odisha – 754202',
-    addressLine1: 'Under Bank Of Baroda, At-Thana',
-    addressLine2: 'Kendrapara Rd, Chaka, Salipur',
-    addressLine3: 'Cuttack, Odisha – 754202',
+    address: 'Under Bank Of Baroda, At-Thana Chaka, Kendrapara Rd, Salipur, Odisha 754202, My Dentist',
+    addressLine1: 'Under Bank Of Baroda, At-Thana Chaka',
+    addressLine2: 'Kendrapara Rd, Salipur',
+    addressLine3: 'Odisha 754202, My Dentist',
     email: 'mydentist.salipur@gmail.com',
-    mapEmbedUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.876543210123!2d86.0123456!3d20.4567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDI3JzI0LjQiTiA4NsKwMDAnNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890',
-    mapLink: 'https://maps.google.com/?q=Salipur,Cuttack,Odisha',
+    mapEmbedUrl: 'https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=Under%20Bank%20Of%20Baroda,%20At-Thana%20Chaka,%20Kendrapara%20Rd,%20Salipur,%20Odisha%20754202,%20My%20Dentist&t=&z=15&ie=UTF8&iwloc=B&output=embed',
+    mapLink: 'https://maps.google.com/?q=Under+Bank+Of+Baroda,+At-Thana+Chaka,+Kendrapara+Rd,+Salipur,+Odisha+754202,+My+Dentist',
   },
   hours: [
     { day: 'Monday – Friday', time: '9:00 AM – 1:00 PM & 4:00 PM – 8:00 PM' },

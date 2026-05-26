@@ -8,11 +8,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'About Dr. S.M Amin | My Dentist Salipur',
+  title: 'About Dr. S.M Amin | Best Dental Surgeon in Salepur',
   description:
-    'Learn about Dr. S.M Amin – BDS graduate from S\'O\'A University with 11+ years of dental expertise in Salipur, Cuttack. Trusted by over 5,000 patients.',
-  alternates: { canonical: 'https://mydentist-salipur.com/about' },
+    'Learn about Dr. S.M Amin – Best Dentist in Salepur. BDS graduate with 11+ years of dental expertise. Trusted by over 5,000 patients in Cuttack district.',
+  alternates: { canonical: 'https://www.mydentistsalepur.com/about' },
 }
+
 
 const timeline = [
   { year: '2013', event: 'Graduated with BDS from S\'O\'A University, Bhubaneswar' },
@@ -52,7 +53,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bio section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white overflow-hidden">
         <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 xl:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideInLeft>
@@ -126,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* Education & Credentials */}
-      <section className="py-16" style={{ background: '#f0fafd' }}>
+      <section className="py-16 overflow-hidden" style={{ background: '#f0fafd' }}>
         <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 xl:px-10">
           <SectionTitle badge="Credentials" title="Education & Professional Journey" />
 
@@ -156,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white overflow-hidden">
         <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 xl:px-10">
           <SectionTitle badge="Our Values" title="What We Stand For" />
 

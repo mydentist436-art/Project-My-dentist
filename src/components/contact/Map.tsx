@@ -7,7 +7,7 @@ export default function Map() {
       {/* Map embed */}
       <div className="relative h-64 md:h-80" style={{ background: '#e8f8fd' }}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.0!2d86.0800!3d20.4600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1a9ae6!2sSalipur%2C%20Cuttack%2C%20Odisha!5e0!3m2!1sen!2sin!4v1000000000"
+          src={clinicInfo.contact.mapEmbedUrl}
           width="100%"
           height="100%"
           style={{ border: 0 }}

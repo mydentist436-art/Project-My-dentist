@@ -6,11 +6,11 @@ import Testimonials from '@/components/home/Testimonials'
 import CTA from '@/components/home/CTA'
 
 export const metadata: Metadata = {
-  title: 'My Dentist – Dr. S.M Amin | Best Dentist in Salipur, Cuttack',
+  title: 'Best Dentist in Salepur | Dental Clinic Near Nischintakoili | Book Appointment',
   description:
-    'My Dentist in Salipur – Expert, painless dental care by Dr. S.M Amin (BDS). Services include RCT, implants, braces, whitening & more. Call 9692827635 today.',
+    'Dental Clinic in Salepur, Odisha | Teeth Cleaning, RCT, Braces. Expert dental care by Dr. S.M Amin (BDS). Call 9692827635 to book your appointment today.',
   alternates: {
-    canonical: 'https://mydentist-salipur.com',
+    canonical: 'https://www.mydentistsalepur.com',
   },
 }
 
