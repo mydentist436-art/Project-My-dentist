@@ -139,7 +139,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900">How to Find Us</h3>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                    We are located <strong>Under Bank Of Baroda</strong>, At-Thana Chaka, Kendrapara Rd, Salipur, Odisha 754202. Look for the My Dentist signboard on the ground floor.
+                    We are located at <strong>My Dentist, Under Bank Of Baroda</strong>, At-Thana Chaka, Kendrapara Rd, Salipur, Odisha 754202, My Dentist. Look for the My Dentist signboard on the ground floor.
                   </p>
                   <p className="text-sm text-gray-500">
                     <strong>Landmarks:</strong> Bank of Baroda, At-Thana Chaka, Kendrapara Rd

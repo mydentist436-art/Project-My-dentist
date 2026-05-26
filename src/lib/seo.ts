@@ -65,7 +65,7 @@ export const jsonLdGraph = {
       telephone: '+919692827635',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Under Bank Of Baroda, At-Thana Chaka, Kendrapara Rd',
+        streetAddress: 'My Dentist, Under Bank Of Baroda, At-Thana Chaka, Kendrapara Rd',
         addressLocality: 'Salepur',
         addressRegion: 'Odisha',
         postalCode: '754202',
